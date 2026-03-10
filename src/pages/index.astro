@@ -1,0 +1,29 @@
+---
+import Hero from '../components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import Sidebar from "../components/Sidebar.astro";
+import Articleitem from '../components/Articleitem.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title ="Hola">
+	<div class="grid md:grid-cols-3 gap-8">
+		<div class="md:col-span-2">
+			<Hero />
+		</div>
+		<Sidebar/>
+	</div>
+	<div class="grid md:grid-cols-3 gap-8 mt-12">
+		<Articleitem number="01" title="Reviving Retro PCs" text="What happens when old are given modern upgrades"
+		img="/images/image-retro-pcs.jpg"/>
+
+		<Articleitem number="02" title="Top 20 laptos of 2022" text="Our best picks for various needs and budgets"
+		img="/images/image-top-laptops.jpg"/>
+
+		<Articleitem number="03" title="The Growth of Gaming" text="How the pandemic has sparked fresh opportunities"
+		img="/images/image-gaming-growth.jpg"/>
+	</div>
+	
+</Layout>
